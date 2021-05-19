@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: #181828;
+  font-size: 14px;
+  line-height: 1;
+  
+}
+
+
+.content_header {
+  min-height: 100vh;
+  position: relative;
+  padding: 240px 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: 70px;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.message {
+  text-align: center;
+  color: #181828;
+}
+
+.message_title {
+  font-family: sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 5rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.lamp {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform-origin: center top;
+  animation-timing-function: cubic-bezier(0.6, 0, 0.38, 1);
+  animation: move 5.1s infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: rotate(40deg)
+  }
+  50% {
+    transform: rotate(-40deg)
+  }
+  100% {
+    transform: rotate(40deg)
+  }
+}
+
+.cable {
+  width: 8px;
+  height: 218px;
+  background-image: linear-gradient(rgb(24 24 40 / 70%), rgb(207 207 240)),
+                    linear-gradient(rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7)),
+                    linear-gradient(rgba(0,0,0,0.7), rgba(0, 0, 0, 0.7));
+}
+
+.cover {
+  width: 200px;
+  height: 80px;
+  background: #0bd5e8;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: relative;
+  z-index: 20;
+}
+
+.in-cover {
+  width: 100%;
+  max-width: 200px;
+  height: 20px;
+  border-radius: 100%;
+  background: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -9px;
+  z-index: 10;
+}
+
+.bulb {
+  width: 50px;
+  height: 50px;
+  background-color: #e6e7a3;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 0 15px 7px rgba(223, 224, 169, 0.8),
+                      0 0 50px 25px rgba(227, 228, 202, 0.877),
+                      -75px 0 30px 15px rgba(244, 245, 215, 0.938);
+          box-shadow: 0 0 25px 7px rgba(234 237 26 / 80%),
+                      0 0 64px 47px rgb(243, 245, 217),
+                      0 0 30px 15px rgba(240, 231, 231, 0.966);
+}
+
+.light {
+  width: 200px;
+  height: 0;
+  border-bottom: 900px solid rgb(238 255 1 / 25%);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 280px;
+  margin: 0 auto;
+  z-index: 1;
+  border-radius: 90px 90px 0 0;
+}
